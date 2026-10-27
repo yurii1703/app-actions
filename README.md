@@ -27,4 +27,4 @@ npx playwright install chromium
 npm test
 ```
 
-`npm run test:components` запускає компонентні тести Playwright; `npm run test:e2e` перевіряє браузерний сценарій і збереження даних у тестовій JSON-БД.
+`npm run test:components` запускає компонентні тести Playwright; `npm run test:e2e` перевіряє браузерний сценарій і збереження даних у тестовій JSON-БД. На Linux, якщо Chromium повідомляє про відсутні системні бібліотеки, встановіть їх командою `npx playwright install-deps chromium`. Тестовий launcher також автоматично підхоплює локальні бібліотеки з `~/.cache/ritm/playwright-libs`, якщо така директорія існує.
