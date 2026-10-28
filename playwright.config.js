@@ -13,7 +13,7 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
   webServer: {
-    command: 'PORT=4174 VITE_PORT=5174 DATABASE_FILE=./data/playwright-users.json npm run dev',
+    command: 'PORT=4174 VITE_PORT=5174 DATABASE_FILE=./test-results/playwright-users.json npm run dev',
     url: 'http://127.0.0.1:5174',
     reuseExistingServer: !process.env.CI,
     timeout: 30_000,

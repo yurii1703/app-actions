@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Vite доступний на `http://localhost:5173`, а API працює на `http://localhost:4173`. Дані зберігаються у `data/users.json` і залишаються локальними.
+Vite доступний на `http://localhost:5173`, а API працює на `http://localhost:4173`. Дані сервера зберігаються у `server/data/users.json` і залишаються локальними.
 
 Для production спочатку зберіть клієнт, потім запустіть Node-сервер:
 
@@ -27,4 +27,4 @@ npx playwright install chromium
 npm test
 ```
 
-`npm run test:components` запускає компонентні тести Playwright; `npm run test:e2e` перевіряє браузерний сценарій і збереження даних у тестовій JSON-БД. На Linux, якщо Chromium повідомляє про відсутні системні бібліотеки, встановіть їх командою `npx playwright install-deps chromium`. Тестовий launcher також автоматично підхоплює локальні бібліотеки з `~/.cache/ritm/playwright-libs`, якщо така директорія існує.
+`npm run test:components` запускає компонентні тести Playwright; E2E-фікстура міститься у `tests/e2e/fixtures`, а `npm run test:e2e` перевіряє браузерний сценарій і збереження даних у тимчасовій JSON-БД у `test-results`. Тестова БД ініціалізується з фікстури, окремо від серверної БД `server/data/users.json`. На Linux, якщо Chromium повідомляє про відсутні системні бібліотеки, встановіть їх командою `npx playwright install-deps chromium`. Тестовий launcher також автоматично підхоплює локальні бібліотеки з `~/.cache/ritm/playwright-libs`, якщо така директорія існує.

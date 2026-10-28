@@ -5,7 +5,7 @@ import { randomUUID } from 'node:crypto'
 import { fileURLToPath } from 'node:url'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
-const databaseFile = resolve(process.env.DATABASE_FILE || join(root, 'data', 'users.json'))
+const databaseFile = resolve(process.env.DATABASE_FILE || join(dirname(fileURLToPath(import.meta.url)), 'data', 'users.json'))
 const distDirectory = join(root, 'dist')
 let writeQueue = Promise.resolve()
 
