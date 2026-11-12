@@ -1,0 +1,15 @@
+name: Test and Build
+run-name: I do testing and building
+
+on:
+  pull_request:
+    types: [opened, reopened]
+    branches: main
+
+jobs:
+  first:
+    name: First_name
+    run-on: ubuntu-latest
+    steps:
+      - name: First step log info
+        run: echo "Hello, World!"
