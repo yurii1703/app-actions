@@ -9,7 +9,7 @@ on:
 jobs:
   first:
     name: First_name
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: First step log info
         run: echo "Hello, World!"
