@@ -34,7 +34,7 @@ function Link({ href, navigate, children, className = '', ...props }) {
 }
 
 function Avatar({ name, index = 0, size = 'normal' }) {
-  return <span className={`avatar avatar--${colors[index % colors.length]} avatar--${size}`} aria-hidden="true">{name.trim().charAt(0).toUpperCase()}</span>
+  return <span className={`avatar avatar--${colors[index % colors.length]} avatar--${size}`}>{name.trim().charAt(0).toUpperCase()}</span>
 }
 
 function Sidebar({ path, navigate }) {
