@@ -26,6 +26,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show inputs
-        run: echo ${{ inputs }}
+        run: echo '${{ toJSON(inputs) }}'
       - name: Show github context
-        run: echo ${{ github }}
+        run: echo '${{ toJSON(github) }}'
