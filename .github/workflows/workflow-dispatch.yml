@@ -1,0 +1,31 @@
+name: Manual trigger
+run-name: Manually triggered
+
+on:
+  workflow_dispatch:
+    inputs:
+      user_name:
+        description: 'What is your name'
+        required: true
+        type: choice
+        options:
+          - Male
+          - Female
+      user_age:
+        description: "How old are you?"
+        required: true
+        type: string
+      does_sport:
+        description: "How old are you?"
+        type: boolean
+        default: false
+
+jobs:
+  print_user:
+    name: Display user
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show inputs
+        run: echo ${{ inputs }}
+      - name: Show github context
+        run: echo ${{ github }}
