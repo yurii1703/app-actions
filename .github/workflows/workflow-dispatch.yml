@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       user_name:
-        description: 'Whati is your name ?'
+        description: 'What is your name ?'
         type: string
         required: true
       user_gender:
@@ -33,7 +33,12 @@ jobs:
         run: echo '${{ toJSON(inputs) }}'
       - name: Show github context
         run: echo '${{ toJSON(github) }}'
+      - name: Show Vars
+        run: echo '${{ toJSON(vars) }}'
+      - name: Show env vars
+        run: echo '${{ toJSON(env) }}'
       - name: Does sport
         if: inputs.does_sport
         run: echo 'You rock!'
+
       
