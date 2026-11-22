@@ -17,4 +17,5 @@ jobs:
         uses: actions/setup-node@v7
       - name: Init node modules
         run:  npm ci
-      - name: npm run lint 
+      - name: Run lint
+        run:  npm run lint 
