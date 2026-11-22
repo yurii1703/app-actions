@@ -2,7 +2,7 @@ export function ProgressRing({ value, size = 40, strokeWidth = 3 }) {
   const radius = (size - strokeWidth) / 2
   const circumference = 2 * Math.PI * radius
   const progress = circumference * (1 - Math.min(100, Math.max(0, value)) / 100)
-  console.log(`Log something`)
+  console.log(`Log something new`)
   return (
     <span className="progress-ring" role="img" aria-label={`${value}% виконано`} style={{ width: size, height: size }}>
       <svg viewBox={`0 0 ${size} ${size}`} aria-hidden="true">
