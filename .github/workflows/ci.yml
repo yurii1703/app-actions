@@ -1,5 +1,5 @@
 name: Test and Build
-run-name: I do testing and building
+run-name: Testing and building
 
 on:
   pull_request:
@@ -7,9 +7,14 @@ on:
     branches: main
 
 jobs:
-  first:
-    name: First_name
+  lint:
+    name: Linting
     runs-on: ubuntu-latest
     steps:
-      - name: First step log info
-        run: echo "Hello, World!"
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Set up node
+        uses: actions/setup-node@v7
+      - name: Init node modules
+        run:  npm ci
+      - name: npm run lint 
