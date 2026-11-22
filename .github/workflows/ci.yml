@@ -3,7 +3,7 @@ run-name: Testing and building
 
 on:
   pull_request:
-    types: [opened, reopened]
+    types: [opened, edited, reopened]
     branches: main
 
 jobs:
