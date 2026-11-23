@@ -19,3 +19,16 @@ jobs:
         run:  npm ci
       - name: Run lint
         run:  npm run lint 
+  unit_test:
+    name: Run unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Set up node
+        uses: actions/setup-node@v7
+      - name: Init node modules
+        run:  npm ci
+      - name: Run tests
+        run: npm run test:components
+
