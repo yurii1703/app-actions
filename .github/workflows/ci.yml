@@ -30,7 +30,7 @@ jobs:
       - name: Init node modules
         run: npm ci
       - name: Install Playwright Browsers
-        run: npx playwright install --with-deps --only-shell
+        run: npx playwright install --with-deps --only-shell chromium
       - name: Run tests
         run: npm run test:components
 
